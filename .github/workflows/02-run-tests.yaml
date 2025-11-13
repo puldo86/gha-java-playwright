@@ -1,0 +1,23 @@
+name: Run Playwright tests
+
+on: push
+
+jobs:
+  test:
+    name: Run Playwright tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java  # Step 2: Installs the Java runtime.
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'  # Uses the Eclipse Temurin distribution of Java.
+          java-version: '21'  # Installs Java version 21.
+
+      - name: Build & Install  # Step 3: Builds the project while skipping tests.
+        run: mvn -B install -D skipTests --no-transfer-progress
+        # -B (batch mode) avoids interactive prompts.
+        # --no-transfer-progress speeds up logs by suppressing transfer details."
