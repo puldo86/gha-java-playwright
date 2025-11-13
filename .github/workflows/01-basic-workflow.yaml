@@ -12,5 +12,6 @@ jobs:
         uses: actions/checkout@v4  # This is a prebuilt action that clones the repository into the workflow runner.
 
       - name: Print environment details  # Step 2: Prints all environment variables to the workflow log.
-        run: env  # The "env" command lists all environment variables available in the runner.
-          echo eerste test
+        env:  # The "env" command lists all environment variables available in the runner.
+        run: |
+          echo hi there
