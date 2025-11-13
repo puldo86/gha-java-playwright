@@ -4,10 +4,10 @@ on: workflow_dispatch  # This defines the event that triggers the workflow. "wor
 
 jobs:
   basic-workflow:  # Defines a job named "basic-workflow".
-    name: Basic Workflow  # The display name for the job in the GitHub Actions UI.
+
     runs-on: ubuntu-latest  # Specifies that this job should run on the latest Ubuntu environment.
 
     steps:
-      - name: Print environment details  # Step 2: Prints all environment variables to the workflow log.
+
       - run: |
           echo "hi there"
