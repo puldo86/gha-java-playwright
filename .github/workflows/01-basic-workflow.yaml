@@ -13,4 +13,8 @@ jobs:
 
       - name: Print environment details  # Step 2: Prints all environment variables to the workflow log.
         run: env  # The "env" command lists all environment variables available in the runner.
+<<<<<<< HEAD
           echo "Hi there"
+=======
+        echo: "Hello World"
+>>>>>>> origin/main
